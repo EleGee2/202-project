@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Classification Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h3>Your Comment Review:</h3>
+        <div class="comment">{{ content }}</div>
+        <h3>Prediction:</h3>
+        <div class="prediction">
+            <p>This comment review is <strong>{{ prediction }}</strong>.</p>
+            <p>Probability: {{ probability }}%</p>
+        </div>
+        <div class="button">
+            <form action="/">
+                <input type="submit" value="Submit Another Review" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
